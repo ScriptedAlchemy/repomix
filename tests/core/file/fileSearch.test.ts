@@ -161,6 +161,22 @@ describe('fileSearch', () => {
       expect(patterns).toEqual(['repomix-output.xml', '*.custom', 'temp/']);
     });
 
+    test('should ignore diff output file when diff mode is enabled', async () => {
+      const mockConfig = createMockConfig({
+        output: { filePath: 'summary.md', diff: true },
+        ignore: {
+          useGitignore: true,
+          useDefaultPatterns: false,
+          customPatterns: [],
+        },
+      });
+
+      const patterns = await getIgnorePatterns(process.cwd(), mockConfig);
+
+      expect(patterns).toContain('summary.md');
+      expect(patterns).toContain('summary.md.diff');
+    });
+
     test('should combine default and custom patterns', async () => {
       const mockConfig = createMockConfig({
         ignore: {
