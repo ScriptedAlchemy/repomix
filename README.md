@@ -626,6 +626,7 @@ Instruction
 - `--truncate-base64`: Truncate long base64 data strings to reduce output size
 - `--header-text <text>`: Custom text to include at the beginning of the output
 - `--instruction-file-path <path>`: Path to file containing custom instructions to include in output
+- `--diff`: If the specified output file already exists, write a unified diff against it instead of the full content
 - `--include-empty-directories`: Include folders with no files in directory structure
 - `--no-git-sort-by-changes`: Don't sort files by git change frequency (default: most changed files first)
 - `--include-diffs`: Add git diff section showing working tree and staged changes

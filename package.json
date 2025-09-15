@@ -82,6 +82,7 @@
     "@secretlint/secretlint-rule-preset-recommend": "^9.3.1",
     "clipboardy": "^4.0.0",
     "commander": "^14.0.0",
+    "diff": "^5.2.0",
     "fast-xml-parser": "^5.2.0",
     "fflate": "^0.8.2",
     "git-url-parse": "^16.1.0",
@@ -104,6 +105,7 @@
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@secretlint/types": "^9.3.4",
+    "@types/diff": "^5.2.3",
     "@types/node": "^22.14.1",
     "@types/strip-comments": "^2.0.4",
     "@typescript/native-preview": "^7.0.0-dev.20250824.1",

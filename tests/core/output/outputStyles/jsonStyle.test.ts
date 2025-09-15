@@ -18,6 +18,7 @@ const createMockConfig = (overrides: Partial<RepomixConfigMerged> = {}): Repomix
     removeComments: false,
     removeEmptyLines: false,
     compress: false,
+    diff: false,
     topFilesLength: 5,
     showLineNumbers: false,
     truncateBase64: false,
