@@ -19,7 +19,15 @@ export const writeOutputToDisk = async (output: string, config: RepomixConfigMer
   if (config.output.diff) {
     try {
       const previousContent = await fs.readFile(outputPath, 'utf8');
-      const patch = createTwoFilesPatch(config.output.filePath, config.output.filePath, previousContent, output);
+      const patch = createTwoFilesPatch(
+        config.output.filePath,
+        config.output.filePath,
+        previousContent,
+        output,
+        undefined,
+        undefined,
+        { context: 0 },
+      );
       const diffPath = `${outputPath}.diff`;
       await fs.mkdir(path.dirname(diffPath), { recursive: true });
       await fs.writeFile(diffPath, patch);
