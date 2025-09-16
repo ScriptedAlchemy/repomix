@@ -116,6 +116,7 @@ export const run = async () => {
       .option('--truncate-base64', 'Truncate long base64 data strings to reduce output size')
       .option('--header-text <text>', 'Custom text to include at the beginning of the output')
       .option('--instruction-file-path <path>', 'Path to file containing custom instructions to include in output')
+      .option('--diff', 'Output diff against existing file instead of full content when available')
       .option('--include-empty-directories', 'Include folders with no files in directory structure')
       .option(
         '--no-git-sort-by-changes',

@@ -261,6 +261,12 @@ export const buildCliConfig = (options: CliOptions): RepomixConfigCli => {
       instructionFilePath: options.instructionFilePath,
     };
   }
+  if (options.diff) {
+    cliConfig.output = {
+      ...cliConfig.output,
+      diff: options.diff,
+    };
+  }
   if (options.includeEmptyDirectories) {
     cliConfig.output = {
       ...cliConfig.output,

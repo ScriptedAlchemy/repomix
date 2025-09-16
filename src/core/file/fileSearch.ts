@@ -290,6 +290,15 @@ export const getIgnorePatterns = async (rootDir: string, config: RepomixConfigMe
     logger.trace('Adding output file to ignore patterns:', relativeToTargetPath);
 
     ignorePatterns.add(relativeToTargetPath);
+
+    if (config.output.diff) {
+      const diffOutputPath = `${absoluteOutputPath}.diff`;
+      const diffRelativePath = path.relative(rootDir, diffOutputPath);
+
+      logger.trace('Adding diff output file to ignore patterns:', diffRelativePath);
+
+      ignorePatterns.add(diffRelativePath);
+    }
   }
 
   // Add custom ignore patterns

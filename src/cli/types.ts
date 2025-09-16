@@ -23,6 +23,7 @@ export interface CliOptions extends OptionValues {
   instructionFilePath?: string;
   includeEmptyDirectories?: boolean;
   gitSortByChanges?: boolean;
+  diff?: boolean;
   includeDiffs?: boolean;
   includeLogs?: boolean;
   includeLogsCount?: number;
